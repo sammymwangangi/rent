@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+      <ion-back-button defaultHref="/" [icon]="buttonIcon"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Apartments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-card>
+	  <ion-card-header>
+	  	 <img *ngIf="!fileUrl" src="assets/1.jpeg"/>
+	    <ion-card-subtitle>2 Bed Room Flat</ion-card-subtitle>
+	    <ion-card-title>KSH10,000.00 monthly</ion-card-title>
+	  </ion-card-header>
+
+	  <ion-card-content>
+	    two bedroom flat
+	  </ion-card-content>
+
+	  <ion-card-content>
+		<ion-button slot="end" color="primary" (click)="checkout($event)">Pay 10,000.00</ion-button>
+	  </ion-card-content>
+	</ion-card>
+
+	<ion-card>
+	  <ion-card-header>
+	  	 <img *ngIf="!fileUrl" src="assets/1.jpeg"/>
+	    <ion-card-subtitle>Bed Sitter</ion-card-subtitle>
+	    <!-- <ion-input type="text" [(ngModel)]="id">{{ plan_Et8WWHlFFGNxym }}</ion-input> -->
+	    <ion-card-title>KSH4,000.00 Monthly</ion-card-title>
+	  </ion-card-header>
+
+	  <ion-card-content>
+	    bed sitter flat
+	  </ion-card-content>
+
+	  <ion-card-content>
+	  	<!-- <ion-input type="number" [(ngModel)]="amount">{{ 4000 }}</ion-input> -->
+		<ion-button slot="end" color="primary" (click)="checkout($event)">Pay 4000.00</ion-button>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>
